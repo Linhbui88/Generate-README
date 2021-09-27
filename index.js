@@ -1,5 +1,24 @@
 var inquirer= require('inquirer')
 var fs= require('fs')
+const licenseChoices=[
+  {name:'Apache2.0',
+  link:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+  },
+  {name: 'BSD 3-Clause',
+  link:'[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgr een.svg)](https://opensource.org/licenses/MPL-2.0)'
+  },
+  {name: 'MIT',
+  link:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+  },
+  {name: 'IBM 1.0',
+  link:'[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
+  },
+]
+var licenseNames=[]
+
+licenseChoices.forEach((license)=>{
+  licenseNames.push(license.name)
+})
 
 inquirer
   .prompt([
@@ -31,9 +50,9 @@ inquirer
     },
     {
       type: 'list',
-      name: 'license',
+      name: 'selectedLicense',
       message: 'What kind of license should your project have?',
-      choices: ['MIT','APACHE 2.0','GPL 3.0','BSD 3','None']
+      choices: licenseNames
     },
     {
       type: 'default',
@@ -58,14 +77,25 @@ inquirer
     
   ])
   .then(answers => {
-    const {username,email,profile,projectName,description,license,dependencies,runTest,usage} = answers
+    const {username,email,profile,projectName,description,selectedLicense,dependencies,runTest,usage} = answers
+
+    let linkLicense
+    licenseChoices.forEach((license) =>{
+      console.log(selectedLicense)
+      console.log(license.name)
+      if(selectedLicense===license.name){ 
+        linkLicense= license.link
+      }
+    })
+    
     let readMe =
     `#${projectName}\n
-![GitHub license](${license})\n
+${linkLicense}\n
 
 ##${description}\n
 
 ## Table of Contents
+
 * [Installation](#installation)\n
 
 * [Usage](#usage)\n
@@ -82,6 +112,7 @@ inquirer
 ## Installation
       
 To install necessary dependencies, run the following command: 
+
 \`\`\`
 ${dependencies}
 \`\`\`
@@ -92,11 +123,12 @@ ${usage}
 
 ## License
 
-This project is licensed under the ${license}.
+This project is licensed under the ${selectedLicense}.
 
 ## Tests
 
 To run tests, run the following command:
+
 \`\`\`
 ${runTest}
 \`\`\`

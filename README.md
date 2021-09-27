@@ -1,12 +1,13 @@
-#sdf
+#
 
-![GitHub license](MIT)
+[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
 
 
-##sdf
+##
 
 
 ## Table of Contents
+
 * [Installation](#installation)
 
 
@@ -29,6 +30,7 @@
 ## Installation
       
 To install necessary dependencies, run the following command: 
+
 ```
 npm i
 ```
@@ -39,14 +41,15 @@ npm i
 
 ## License
 
-This project is licensed under the MIT.
+This project is licensed under the IBM 1.0.
 
 ## Tests
 
 To run tests, run the following command:
+
 ```
 npm test
 ```
 
 ## Questions
-If you have any questions about the repo, open an issue or contact me directly at dsfsdf.You can find more of my work at [sdfsdf](dsf)
+If you have any questions about the repo, open an issue or contact me directly at .You can find more of my work at []()
