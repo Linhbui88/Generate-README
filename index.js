@@ -1,14 +1,14 @@
 var inquirer= require('inquirer')
 var fs= require('fs')
 const licenseChoices=[
-  {name:'Apache2.0',
+  {name:'MIT',
   link:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
   },
   {name: 'BSD 3-Clause',
-  link:'[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgr een.svg)](https://opensource.org/licenses/MPL-2.0)'
+  link:'[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
   },
-  {name: 'MIT',
-  link:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+  {name: 'Apache 2.0',
+  link:'[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
   },
   {name: 'IBM 1.0',
   link:'[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)'
@@ -134,7 +134,11 @@ ${runTest}
 \`\`\`
 
 ## Questions
-If you have any questions about the repo, open an issue or contact me directly at ${email}.You can find more of my work at [${username}](${profile})`
+If you have any questions about the repo, open an issue or contact me directly at ${email}.You can find more of my work at [${username}](${profile})
+
+## Link to Screencastify
+[Link to Screencastify](https://watch.screencastify.com/v/cbZ6rLgo8kRZwoZbQOjE)
+`
 
       fs.writeFile('README.md',readMe,err =>{
         console.log(err)

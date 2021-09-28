@@ -1,6 +1,6 @@
 #
 
-[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ##
@@ -41,7 +41,7 @@ npm i
 
 ## License
 
-This project is licensed under the IBM 1.0.
+This project is licensed under the MIT.
 
 ## Tests
 
@@ -53,3 +53,6 @@ npm test
 
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at .You can find more of my work at []()
+
+## Link to Screencastify
+[Link to Screencastify](https://watch.screencastify.com/v/cbZ6rLgo8kRZwoZbQOjE)
